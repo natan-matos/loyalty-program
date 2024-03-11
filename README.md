@@ -79,24 +79,22 @@ Algumas hipóteses de negócio foram levantadas, para serem validadas ou não. N
 
 # 6. Feature Engineering
 
-Com o conjunto de dados original não é possível encontrar um comportamento de compra, ao ponto de conseguir separar os clusters. Para resolver isso, derivei algums features do conjunto de dados orignial, agrupando todas por "customer_id" único. São elas:
+Usando o conjunto de dados original os algoritmos testados não foram capazes de  encontrar um comportamento de compra, ao ponto de conseguir separar os clusters de maneira satisfatória. Para resolver isso, derivei algums features do conjunto de dados orignial, agrupando todas por "customer_id" único. São elas:
 
 ['customer_id', 'gross_revenue', 'recency_days', 'qtde_invoices', 'qtde_items', 'qtde_products', 'avg_ticket', 'avg_recency_days', 'frequency', 'qtde_returns', 'avg_basket_size', 'avg_unique_basket_size', 'revenue_returned']
 
 <img src="img/feature_eng.png" style="zoom:100%;" />
 
+
 # 7. Hyperparameter Fine-Tuning
 
-Depois de modelar os dados usando as técnicas de encoding e nature transformation, o Boruta foi usado para selecionar as melhores features para o modelo. Aqui está a seleção das features mais relevantes para o modelo:
-
-['store','promo','store_type','assortment','competition_distance','competition_open_since_month','competition_open_since_year','promo2','promo2_since_week','promo2_since_year','competition_time_month','promo_time_week','day_of_week_sin','day_of_week_cos','month_sin','month_cos','day_sin','day_cos','week_of_year_sin','week_of_year_cos'']
+Encontrar o número correto de clusters pode ser um dos maiores desafios em problemas de clusterização. Uma das maneiras de encontrar o número de clusters ideal é o Elbow Method e a curva do Silhouette Score que compara o valor da métrica em relação a diferntes valores de clusters.
 
 Em total, foram testados e comparados 5 modelos:
-* Média
-* Regressão Linear
-* Regressão Linear Regularizada
-* Random Forest
-* XGBoost
+* K-Means
+* Gaussian Mixture Model
+* Hierarchical Clustering
+* DBSCAN
 
 Para encontrar a real performance, foi usada a técnica de cross validation para séries temporáis, já que tempo é uma variável importante no nosso problema. Para isso, apenas as últimas 6 semanas foram separadas para test, e o resto dos dados foi separado em 5 partes para serem usados para treino e teste de forma que não fossem usados dados futuros para as previsões.
 
