@@ -65,15 +65,15 @@ Algumas hipóteses de negócio foram levantadas, para serem validadas ou não. N
 
 | **Insight 01 - Insiders faturam 10% acima do restante da base** |
 | --- |
-| <img src="img/competition_distane.png" style="zoom:60%;" /> |
+| <img src="img/gross_revenue.png" style="zoom:60%;" /> |
 
 | **Insight 02 - Grupo Insiders tem a média de devolução menor que a base total** |
 | --- |
-| <img src="img/competition-time.png" style="zoom:60%;" /> | 
+| <img src="img/returns.png" style="zoom:60%;" /> | 
 
 | **Insight 03 - Insiders tem volume de compra (produtos) maior que a base total** | 
 | --- |
-| <img src="img/promo-time.png" style="zoom:60%;" /> | 
+| <img src="img/qtde_products.png" style="zoom:60%;" /> | 
 
 
 # 6. Feature Engineering
