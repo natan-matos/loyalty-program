@@ -17,8 +17,8 @@ Foi decidido pela criação de um programa de fidelidade para os melhores client
 
 
 # 2. Suposições de Negócio
-- Considerei quantidades menores a 0 como devoluções de uma compra.
-- Valores da  variável "stock_code" não exclusivamente numéricas serão excluidos, já que não há suficiente informção para saber do que se tratam .
+- Considerei valores na coluna "quantity" menores a 0 como sendo devoluções de uma compra.
+- Valores da variável "stock_code" não exclusivamente numéricas serão excluidos, já que não há suficiente informção para saber do que se tratam .
 - Aproximadamente 25% das transações não possuem um "customer_id". Foi criado um valor artificial para estas transações. É possível que alguns comportamentos de compra sejam perdidos.
  
 
