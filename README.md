@@ -84,6 +84,7 @@ Com o conjunto de dados original não é possível encontrar um comportamento de
 ['customer_id', 'gross_revenue', 'recency_days', 'qtde_invoices', 'qtde_items', 'qtde_products', 'avg_ticket', 'avg_recency_days', 'frequency', 'qtde_returns', 'avg_basket_size', 'avg_unique_basket_size', 'revenue_returned']
 
 <img src="img/feature_eng.png" style="zoom:100%;" />
+
 # 7. Hyperparameter Fine-Tuning
 
 Depois de modelar os dados usando as técnicas de encoding e nature transformation, o Boruta foi usado para selecionar as melhores features para o modelo. Aqui está a seleção das features mais relevantes para o modelo:
