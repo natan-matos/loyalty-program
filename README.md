@@ -1,7 +1,7 @@
 Loyaty Program | Custering
 ==============================
 
-## 1. Problema de Negócio
+# 1. Problema de Negócio
 
 A empresa é um Outlet multimarcas, ou seja ela comercializa produtos de segunda linha de várias marcas a um preço menor, através de um e-commerce.
 
@@ -16,13 +16,13 @@ Foi decidido pela criação de um programa de fidelidade para os melhores client
 | Criar programa de fidelidade | Incrementar o faturamento | Quem são os clientes de alto valor? |
 
 
-## 2. Suposições de Negócio
+# 2. Suposições de Negócio
 - Considerei quantidades menores a 0 como devoluções de uma compra.
 - Valores da  variável "stock_code" não exclusivamente numéricas serão excluidos, já que não há suficiente informção para saber do que se tratam .
 - Aproximadamente 25% das transações não possuem um "customer_id". Foi criado um valor artificial para estas transações. É possível que alguns comportamentos de compra sejam perdidos.
  
 
-## 3. Desenvolvimento da Solução
+# 3. Desenvolvimento da Solução
 ### 3.1. Produto Final
 - Um reporte em csv com a lista dos clientes selecionados.
 - Algoritmo treinado disponível na AWS para futuras clusterizações
@@ -58,7 +58,7 @@ Este é um conjunto de dados transnacionais que contém todas as transações oc
 
 <img src="img/original_data_set.png" style="zoom:100%;" />
     
-## 5. Top 3 Insights
+# 5. Top 3 Insights
 
 ### 5.1. Insights
 
