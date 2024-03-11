@@ -1,7 +1,5 @@
-Loyaty Program
+Loyaty Program | Custering
 ==============================
-
-Projeto de Clusterização
 
 ## 1. Problema de Negócio
 
