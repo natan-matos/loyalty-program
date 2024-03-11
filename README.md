@@ -88,7 +88,7 @@ Usando o conjunto de dados original os algoritmos testados não foram capazes de
 
 # 7. Espaço de dados | Embedding
 
-Em projetos de clusterização, a escolha do espaço de representação dos dados desempenha um papel crucial. Tradicionalmente, utilizamos o espaço de features para realizar a clusterização. No entanto, não apresentaram uma clusterização coesa. Uma abordagem inovadora é empregar espaços de embedding com UMAP (Uniform Manifold Approximation and Projection).
+Em projetos de clusterização, a escolha do espaço de representação dos dados desempenha um papel crucial. Tradicionalmente, utilizamos o espaço de features para realizar a clusterização. No entanto, este conjunto de dados não apresentara uma clusterização coesa no espaço de features. Uma abordagem inovadora para contornar este problema é empregar espaços de embedding como PCA, TNSE e UMAP (Uniform Manifold Approximation and Projection).
 
 O UMAP, um método de redução de dimensionalidade, destaca-se por preservar a topologia e a estrutura local dos dados de forma eficaz. Ao utilizar espaços de embedding gerados pelo UMAP, em vez do espaço de features convencional, beneficiamos-nos da capacidade do UMAP em capturar relações não lineares complexas entre os pontos.
 
