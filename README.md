@@ -86,7 +86,22 @@ Usando o conjunto de dados original os algoritmos testados não foram capazes de
 <img src="img/feature_eng.png" style="zoom:100%;" />
 
 
-# 7. Hyperparameter Fine-Tuning
+# 7. Espaço de dados | Embedding
+
+Em projetos de clusterização, a escolha do espaço de representação dos dados desempenha um papel crucial. Tradicionalmente, utilizamos o espaço de features para realizar a clusterização. No entanto, este conjunto de dados não apresentara uma clusterização coesa no espaço de features. Uma abordagem inovadora para contornar este problema é empregar espaços de embedding como PCA, TNSE e UMAP (Uniform Manifold Approximation and Projection).
+
+O UMAP, um método de redução de dimensionalidade, destaca-se por preservar a topologia e a estrutura local dos dados de forma eficaz. Ao utilizar espaços de embedding gerados pelo UMAP, em vez do espaço de features convencional, beneficiamos-nos da capacidade do UMAP em capturar relações não lineares complexas entre os pontos.
+
+<img src="img/embedding_code.png" align="center" style="zoom:100%;" />
+
+Esta abordagem permite uma melhor representação intrínseca dos dados, muitas vezes levando a agrupamentos mais significativos. Ao adotar espaços de embedding com UMAP para clusterização, exploramos de maneira mais eficiente a distribuição dos dados no espaço, promovendo uma visão mais precisa das relações latentes entre as observações.
+
+Em comparação ao espaço de feartures, o ebedding baseado em um Random Forest apresentou uma capacidade muito maior em encontrar clusters coesos e separados entre si. Este é a visualização dos clusters formados no espaço de embedding formado com duas dimensões.
+
+<img src="img/embedding.png" align="center" style="zoom:100%;" />
+
+
+# 8. Hyperparameter Fine-Tuning
 
 Encontrar o número correto de clusters pode ser um dos maiores desafios em problemas de clusterização. Uma das maneiras de encontrar o número de clusters ideal é o Elbow Method e a curva do Silhouette Score que compara o valor da métrica em relação a diferntes valores de clusters.
 
@@ -96,40 +111,17 @@ Em total, foram testados e comparados 5 modelos:
 * Hierarchical Clustering
 * DBSCAN
 
-Para encontrar a real performance, foi usada a técnica de cross validation para séries temporáis, já que tempo é uma variável importante no nosso problema. Para isso, apenas as últimas 6 semanas foram separadas para test, e o resto dos dados foi separado em 5 partes para serem usados para treino e teste de forma que não fossem usados dados futuros para as previsões.
+Como o gráfico curca de Silhouette Score mostra, usando o espaço de embedding o valor da métrica aumenta junto com o número de clusters. Porem um número de clusters muito alto não é factível para o time de Marketing conseguir manejar. 
+Aqui é onde se mostra muito importante o entedimento de negócio por parte do Data Scientist e uma boa comunicação com os stakeholders do projeto para chegar a um valor que atenda as necessidades.
 
-<img src="img/model_performance.png" style="zoom:100%;" />
+Para os fins deste projeto, o número de clusters foi definido em 11
 
-Após o cross validation, essas são as performances reais dos modelos:
+<img src="img/elbow-method.png" style="zoom:100%;" />
 
-<img src="img/corss-validation.png" align="center" style="zoom:10%;" />
+<img src="img/silhouette-curve.png" align="center" style="zoom:10%;" />
 
-A média de vendas foi usada como medida de base para previsão. Isso nos permite ter um valor base para comprar outros modelos mais complexos. Como pode ser visto, os modelos lineares tiveram uma performance inferior à média. Isso mostra que o fenômeno que buscamos modelar aqui é complexo e não linear.
-Uma observação deve ser feira. Apesar de a Random Forest ter performado melhor, o modelo escolhido foi o XGBoost. A razão para isso é que o modelo gerado pela Random Forest pode ser muito grande, ocupando muito espaço em memória, gerando problemas no momento do deploy.
 
-# 6. Modelo de Machine Learnig Aplicado
 
-Depois de modelar os dados usando as técnicas de encoding e nature transformation, o Boruta foi usado para selecionar as melhores features para o modelo. Aqui está a seleção das features mais relevantes para o modelo:
-
-['store','promo','store_type','assortment','competition_distance','competition_open_since_month','competition_open_since_year','promo2','promo2_since_week','promo2_since_year','competition_time_month','promo_time_week','day_of_week_sin','day_of_week_cos','month_sin','month_cos','day_sin','day_cos','week_of_year_sin','week_of_year_cos'']
-
-Em total, foram testados e comparados 5 modelos:
-* Média
-* Regressão Linear
-* Regressão Linear Regularizada
-* Random Forest
-* XGBoost
-
-Para encontrar a real performance, foi usada a técnica de cross validation para séries temporáis, já que tempo é uma variável importante no nosso problema. Para isso, apenas as últimas 6 semanas foram separadas para test, e o resto dos dados foi separado em 5 partes para serem usados para treino e teste de forma que não fossem usados dados futuros para as previsões.
-
-<img src="img/model_performance.png" style="zoom:100%;" />
-
-Após o cross validation, essas são as performances reais dos modelos:
-
-<img src="img/corss-validation.png" align="center" style="zoom:10%;" />
-
-A média de vendas foi usada como medida de base para previsão. Isso nos permite ter um valor base para comprar outros modelos mais complexos. Como pode ser visto, os modelos lineares tiveram uma performance inferior à média. Isso mostra que o fenômeno que buscamos modelar aqui é complexo e não linear.
-Uma observação deve ser feira. Apesar de a Random Forest ter performado melhor, o modelo escolhido foi o XGBoost. A razão para isso é que o modelo gerado pela Random Forest pode ser muito grande, ocupando muito espaço em memória, gerando problemas no momento do deploy.
 
 
 # 7. Performance do Modelo & Fine Tunnig
