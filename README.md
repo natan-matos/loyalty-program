@@ -9,11 +9,12 @@ Em 1 ano de operação, o time de marketing percebeu que alguns clientes da base
 
 Foi decidido pela criação de um programa de fidelidade para os melhores clientes (Insiders). O time de marketing precisa saber quem são estes clientes.
 
-> Vocẽ é cientista de dados. Após a reunião mensal foi decidido que você, como Cientista de Dados, está encarregado de determinar quais são os clientes elegíveis para participar do Insiders. Com esta lista o time de Marketing fará campanhas personalizadas e exclusivas ao grup, para aumentar o faturamento e fequeência de compra.
+> Você é cientista de dados. Após a reunião mensal foi decidido que você, como Cientista de Dados, está encarregado de determinar quais são os clientes elegíveis para participar do Insiders. Com esta lista o time de Marketing fará campanhas personalizadas e exclusivas ao grup, para aumentar o faturamento e fequeência de compra.
 
 | Problema | Causa Raiz | Questão principal |
 | --- | --- | --- |
 | Criar programa de fidelidade | Incrementar o faturamento | Quem são os clientes de alto valor? |
+
 
 ## 2. Suposições de Negócio
 - Considerei quantidades menores a 0 como devoluções de uma compra.
