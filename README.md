@@ -126,8 +126,9 @@ Para os fins deste projeto, o número de clusters foi definido em 11
 
 Para encontrar os melhores parâmetros para treinar o modelo escolhido, foi usada uma Random Forest. Em futuros ciclos do CRISP-DM novos hiperparâmetros podem ser testados, para melhorar ainda mais a performance do modelo de Machine Learning. Após o modelo XGBoost ser treinado novamente com os hiperparâmetros encontrados, consegui chegar a performance final do modelo.
 
-<img src="img/cluster-profile.png" align="center" style="zoom:100%;" />
+<img src="img/cluster-profile2.png" align="center" style="zoom:100%;" />
 
+<img src="img/dashboard.png" align="center" style="zoom:100%;" />
 
 # 8. Deployment
 
