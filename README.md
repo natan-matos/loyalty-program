@@ -111,7 +111,7 @@ Em total, foram testados e comparados 5 modelos:
 * Hierarchical Clustering
 * DBSCAN
 
-Como o gráfico curca de Silhouette Score mostra, usando o espaço de embedding o valor da métrica aumenta junto com o número de clusters. Porem um número de clusters muito alto não é factível para o time de Marketing conseguir manejar. 
+Como o gráfico da curva de Silhouette Score mostra, usando o espaço de embedding o valor da métrica aumenta junto com o número de clusters. Porem um número de clusters muito alto não é factível para o time de Marketing conseguir manejar. 
 Aqui é onde se mostra muito importante o entedimento de negócio por parte do Data Scientist e uma boa comunicação com os stakeholders do projeto para chegar a um valor que atenda as necessidades.
 
 Para os fins deste projeto, o número de clusters foi definido em 11
@@ -126,7 +126,7 @@ Para os fins deste projeto, o número de clusters foi definido em 11
 
 Para encontrar os melhores parâmetros para treinar o modelo escolhido, foi usada uma Random Forest. Em futuros ciclos do CRISP-DM novos hiperparâmetros podem ser testados, para melhorar ainda mais a performance do modelo de Machine Learning. Após o modelo XGBoost ser treinado novamente com os hiperparâmetros encontrados, consegui chegar a performance final do modelo.
 
-<img src="img/fina-model-xgboost.png" align="center" style="zoom:100%;" />
+<img src="img/cluster-profile.png" align="center" style="zoom:100%;" />
 
 
 # 8. Deployment
