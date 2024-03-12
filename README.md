@@ -125,7 +125,7 @@ Análise de silhoueta.
 
 
 
-# 7. EDA
+# 9. EDA
 
 Após a definição dos clusters, é momento de fazer uma análise do comportamento de cada um deles, e principalmente o cluster Insiders. Abaixo mostro o perfil de cada cluster, com alugumas métricas importates. Levando em consideração que 3 métricas pricipais foram levadas em conta para a definição do Insiders: Gross Revenue, Recency, Frequecy.
 <img src="img/cluster-profile2.png" align="center" style="zoom:100%;" />
@@ -134,14 +134,19 @@ Também criei um dashboard, usando Metabase, para facilitar a visualização dos
 <img src="img/dashboard.png" align="center" style="zoom:100%;" />
 
 
-# 8. Deployment
+# 10. Deployment
 
-Neste ponto o modelo já está pronto para ir para produção e ser disponibilizado para o usuário final. O forma como este produto será entregue é um bot no telegram, onde o usuário insere o número de loja, e recebe as previsões de vendas para as próximas 6 semanas somadas.
+Decidi por usar a estrutura da AWS para por este projeto em produção. Uma estrutura automatizada para clusterizações futuras usando novos dados recebidos.
 
-Aqui você pode ver o funcionamento da API:
+- Foi criado um bucket na S3 para armazenar o csv original.
+- Uma instância EC2 é usada para rodar o algoritmo de clusterização ( notebooks/12-nm-deploy.ipynb ), recebendo o código via GitHub.
+- Um CronJob foi definido para que o algoritmo faça novas clusterizações a cada 7 dias.
+- O output ( base de clientes já com os labels dos clusters ) é inserido em um PostgresSQL na RDS.
+- A ferramenta de visualização recebe os dados atualizados diretamento do banco RDS.
+
+  Você pode ver a arquitetura do deploy abaixo:
 
 <img src="img/aws-architecture.jpeg" align="center" style="zoom:100%;" />
-
 
 
 # 10. Conclusão
