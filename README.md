@@ -128,9 +128,11 @@ Análise de silhoueta.
 # 9. EDA
 
 Após a definição dos clusters, é momento de fazer uma análise do comportamento de cada um deles, e principalmente o cluster Insiders. Abaixo mostro o perfil de cada cluster, com alugumas métricas importates. Levando em consideração que 3 métricas pricipais foram levadas em conta para a definição do Insiders: Gross Revenue, Recency, Frequecy.
+
 <img src="img/cluster-profile2.png" align="center" style="zoom:100%;" />
 
 Também criei um dashboard, usando Metabase, para facilitar a visualização dos dados por parte do time de Marketing.
+
 <img src="img/dashboard.png" align="center" style="zoom:100%;" />
 
 
