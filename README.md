@@ -5,7 +5,7 @@ Loyaty Program | Custering
 
 A empresa é um Outlet multimarcas, ou seja ela comercializa produtos de segunda linha de várias marcas a um preço menor, através de um e-commerce.
 
-Em 1 ano de operação, o time de marketing percebeu que alguns clientes da base, compram produtos mais caros, com alta frequência e que eles representam uma parte significativa do faturamento da empresa.
+Em 1 ano de operação, o time de marketing percebeu que alguns clientes da base compram produtos mais caros, com alta frequência e que eles representam uma parte significativa do faturamento da empresa.
 
 Foi decidido pela criação de um programa de fidelidade para os melhores clientes (Insiders). O time de marketing precisa saber quem são estes clientes.
 
@@ -119,6 +119,7 @@ Para os fins deste projeto, o número de clusters foi definido em 11
 <img src="img/elbow-method.png" style="zoom:100%;" />
 
 <img src="img/silhouette-curve.png" align="center" style="zoom:10%;" />
+<img src="img/silhouette-analysis.png" align="center" style="zoom:10%;" />
 
 
 
@@ -136,7 +137,7 @@ Neste ponto o modelo já está pronto para ir para produção e ser disponibiliz
 
 Aqui você pode ver o funcionamento da API:
 
-<img src="img/telegram-bot.gif" align="center" style="zoom:100%;" />
+<img src="img/aws-architecture.jpeg" align="center" style="zoom:100%;" />
 
 # 9. Resultados de Negócio
 
