@@ -119,17 +119,20 @@ Para os fins deste projeto, o número de clusters foi definido em 11
 <img src="img/elbow-method.png" style="zoom:100%;" />
 
 <img src="img/silhouette-curve.png" align="center" style="zoom:10%;" />
+
+Análise de silhoueta.
 <img src="img/silhouette-analysis.png" align="center" style="zoom:10%;" />
 
 
 
 # 7. EDA
 
-Para encontrar os melhores parâmetros para treinar o modelo escolhido, foi usada uma Random Forest. Em futuros ciclos do CRISP-DM novos hiperparâmetros podem ser testados, para melhorar ainda mais a performance do modelo de Machine Learning. Após o modelo XGBoost ser treinado novamente com os hiperparâmetros encontrados, consegui chegar a performance final do modelo.
-
+Após a definição dos clusters, é momento de fazer uma análise do comportamento de cada um deles, e principalmente o cluster Insiders. Abaixo mostro o perfil de cada cluster, com alugumas métricas importates. Levando em consideração que 3 métricas pricipais foram levadas em conta para a definição do Insiders: Gross Revenue, Recency, Frequecy.
 <img src="img/cluster-profile2.png" align="center" style="zoom:100%;" />
 
+Também criei um dashboard, usando Metabase, para facilitar a visualização dos dados por parte do time de Marketing.
 <img src="img/dashboard.png" align="center" style="zoom:100%;" />
+
 
 # 8. Deployment
 
