@@ -151,8 +151,11 @@ Decidi por usar a estrutura da AWS para por este projeto em produção. Uma estr
 
 # 10. Conclusão
 
-
+O projeto demonstrou uma abordagem inovadora ao utilizar o UMAP para a clusterização, resultando em agrupamentos mais significativos e coesos. Foram identificados insights cruciais sobre o comportamento dos clientes, permitindo a criação de estratégias de marketing mais eficazes para o grupo Insider. A utilização da infraestrutura da AWS garantiu uma implementação automatizada e eficiente, facilitando futuras clusterizações e decisões de negócios. O programa de fidelidade tem o potencial de aumentar o faturamento e a frequência de compra, fortalecendo a relação com os clientes mais valiosos.
 
 # 11. Próximos passos
 
+- Definir critérios para permanência, ou não, no grupo Insiders.
+- Definir um periodo mais acorde com as necessidades do negócio para realizar novas clisterizações.
+- Determinar ações para os demais grupos, fazendo com que se aproximem do Insiders.
 
