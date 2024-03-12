@@ -142,14 +142,7 @@ Aqui você pode ver o funcionamento da API:
 
 <img src="img/aws-architecture.jpeg" align="center" style="zoom:100%;" />
 
-# 9. Resultados de Negócio
 
-Uma parte importante de qualquer projeto de Data Science é traduzir os perfomance em resultados reais de negócio. Para este projeto, MAE (Mean Absolute Error), foi a métrica escolhida para explicar em valores reais a performance do modelo de Machine Learning. As previsões têm uma margem de erro, para mais ou para menos. 
-
-Segue abaixo uma tablea, levando em consideração a margem de erro do modelo, apresentando assim o melhor e pior cenário da previsão de vendas.
-
-
-<img src="img/scenarios.png" align="center" style="zoom:100%;" />
 
 # 10. Conclusão
 
